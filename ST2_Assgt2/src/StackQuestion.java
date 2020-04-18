@@ -10,6 +10,7 @@ public class StackQuestion {
     stk.push(15);
     stk.push(9);
     System.out.println(stk);
+    System.out.println("Hello");
   }
 
   // TODO Complete the sortStack method to sort the input stack
