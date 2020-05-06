@@ -13,7 +13,7 @@ public class StackQuestion {
     }
 
     System.out.println("Before sort: " + stk);
-    Stack<Integer> sortedStack = sortStack(stk);
+    Stack<Integer> sortedStack = sortStack(stk); // sortStack
     System.out.println("After sort: " + sortedStack);
   }
 
