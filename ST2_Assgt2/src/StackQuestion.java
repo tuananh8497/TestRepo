@@ -3,28 +3,37 @@ import java.util.Stack;
 
 public class StackQuestion {
   public static void main(String[] args) {
-    Stack stk = new Stack<>();
+    Stack<Integer> stk = new Stack<>();
     Random r = new Random();
 
-    for (int i = 0; i < 5; i++) {
+    // generate 10 random number between 0 and 100
+    for (int i = 0; i < 10; i++) {
       int x = r.nextInt(100);
       stk.push(x);
-      System.out.println("loop #" + i + ": " + stk.peek());
     }
+
     System.out.println("Before sort: " + stk);
-    sortStack(stk);
-    System.out.println("After sort: " + stk);
+    Stack<Integer> sortedStack = sortStack(stk);
+    System.out.println("After sort: " + sortedStack);
   }
 
-  // TODO Complete the sortStack method to sort the input stack
   public static Stack<Integer> sortStack(Stack<Integer> input) {
+    Stack<Integer> tmpStack = new Stack<Integer>();
+    while (!input.isEmpty()) {
 
-    Stack tmp = new Stack<>();
-    if (tmp.empty()) {
-      tmp.push(input.pop());
+      // pop the top the number into temporary stack
+      // compare the top number of current input to the teporary number in temp Stack
+      int tmpNumber = input.pop();
+      while (!tmpStack.isEmpty() && tmpStack.peek() < tmpNumber) {
+        input.push(tmpStack.pop());
+      }
+      tmpStack.push(tmpNumber);
     }
-
-
+    // return the all the input number back to input Stack
+    while (!tmpStack.empty()) {
+      int tmpNum = tmpStack.pop();
+      input.push(tmpNum);
+    }
     return input;
   }
 }
