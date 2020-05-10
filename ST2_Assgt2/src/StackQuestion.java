@@ -6,7 +6,7 @@ public class StackQuestion {
     Stack<Integer> stk = new Stack<>();
     Random r = new Random();
 
-    // generate 10 random number between 0 and 100
+    // generate 10 random number between 0 and 100.
     for (int i = 0; i < 10; i++) {
       int x = r.nextInt(100);
       stk.push(x);

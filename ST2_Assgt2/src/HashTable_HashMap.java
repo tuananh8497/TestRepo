@@ -36,7 +36,7 @@ public class HashTable_HashMap {
     Map<String, Integer> ransomMap = new HashMap<String, Integer>();
 
     // count number of words occurence in magazine array
-    // then store them in magMap(HashMap)
+    // then store them in magMap(HashMap).
     for (String word : magazine) {
       if (!magMap.containsKey(word)) {
         magMap.put(word, 0);
@@ -46,7 +46,7 @@ public class HashTable_HashMap {
     }
 
     // count number of words occurence in ransom array
-    // then store them in ransomMap(HashMap)
+    // then store them in ransomMap(HashMap).
     for (String word : ransom) {
       if (!ransomMap.containsKey(word)) {
         ransomMap.put(word, 0);
