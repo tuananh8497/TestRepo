@@ -77,7 +77,6 @@ public class Board extends JPanel implements ActionListener {
       if (z == 0) {
         snake.addHead(50, 50, Color.RED);
       } else {
-        System.out.println(z);
         snake.addJoint(50 - z * DOT_SIZE, 50, colours[z]);
       }
     }
