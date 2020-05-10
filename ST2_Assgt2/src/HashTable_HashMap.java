@@ -57,7 +57,7 @@ public class HashTable_HashMap {
 
     // if magMap not contain all the key required in ransomMap -> return false
     // if magMap not contain enough key required in needed for ransomMap -> return false
-    // if it meet all requirement -> return true
+    // if it meet all requirement -> return true.
     for (String key : ransomMap.keySet()) {
       if (!magMap.containsKey(key)) {
         return false;
